@@ -46,12 +46,21 @@ $("#check").on("click", function() {
     $(".card-revealed").show();
 });
 
+$(".go-back").on("click", function() {
+    $(".card-initial").hide();
+    $(".card-revealed").hide();
+    $(".cards-done").hide();
+    $(".decks").show();
+    cardIndex = 0;
+});
+
 $(".answer-btn").on("click", function () {
   if (cardIndex + 1 >= cards.length) {
     $(".card-initial").hide();
     $(".card-revealed").hide();
     $(".cards-done").show();
     $(".decks").show();
+    cardIndex = 0;
   } else {
     $(".card-revealed").hide();
     cardIndex++;
