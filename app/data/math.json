@@ -1,0 +1,20 @@
+{
+  "name": "Basic Math",
+  "cards": [
+    {
+      "question": "What is 2 + 2?",
+      "answer": "4",
+      "tags": ["math", "adding"]
+    },
+    {
+      "question": "What is 4 + 2?",
+      "answer": "6",
+      "tags": ["math", "adding"]
+    },
+    {
+      "question": "What is 2 + 10?",
+      "answer": "12",
+      "tags": ["math", "adding"]
+    }
+  ]
+}

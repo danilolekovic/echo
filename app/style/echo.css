@@ -1,0 +1,12 @@
+.card-revealed {
+    display: none;
+}
+
+.card {
+    text-align: center;
+    display: none;
+}
+
+.cards-done {
+    display: none;
+}

@@ -1,0 +1,33 @@
+{
+  "name": "echo",
+  "version": "1.0.0",
+  "description": "spaced-repitition flashcards",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danilolekovic/echo.git"
+  },
+  "keywords": [
+    "SR",
+    "learning",
+    "flashcards",
+    "tests",
+    "quiz",
+    "quizzes",
+    "memorization",
+    "memory",
+    "education"
+  ],
+  "author": "Danilo Lekovic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danilolekovic/echo/issues"
+  },
+  "homepage": "https://github.com/danilolekovic/echo#readme",
+  "devDependencies": {
+    "electron": "^9.2.0"
+  }
+}

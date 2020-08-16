@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Echo</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="./style/echo.css">
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-initial">
+            <h2 class="card-question">Question?</h2>
+            <a href="#" id="check">Check</a>
+        </div>
+
+        <div class="card-revealed">
+            <h2 class="card-answer">Answer here</h2>
+
+            <a href="#" class="answer-btn" id="easy">Easy</a>
+            <a href="#" class="answer-btn" id="good">Good</a>
+            <a href="#" class="answer-btn" id="hard">Hard</a>
+        </div>
+
+        <div class="cards-done">
+            <h1>Good job! All your cards are done for now.</h1>
+        </div>
+    </div>
+
+    <div class="decks">
+        <h2>Decks</h2>
+        <ul class="decks-list">
+        </ul>
+    </div>
+
+    <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+    <script src="./lib/jquery.js"></script>
+    <script src="./echo/echo.js"></script>
+    <script>if (window.module) module = window.module;</script>
+</body>
+
+</html>
