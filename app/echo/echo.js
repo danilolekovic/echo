@@ -28,6 +28,7 @@ var loadDecks = function() {
 var selectDeck = function(deck) {
     rawdata = fs.readFileSync("./data/" + deck + ".json");
     cards = JSON.parse(rawdata)["cards"];
+    $(".card-count").html((cardIndex + 1) + "/" + cards.length);
     cardIndex = 0;
     $(".decks").hide();
     $(".cards-done").hide();
@@ -54,6 +55,7 @@ $(".answer-btn").on("click", function () {
   } else {
     $(".card-revealed").hide();
     cardIndex++;
+    $(".card-count").html(cardIndex + 1 + "/" + cards.length);
     showCard();
   }
 });

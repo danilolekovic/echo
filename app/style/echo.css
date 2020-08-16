@@ -10,3 +10,10 @@
 .cards-done {
     display: none;
 }
+
+.card-count {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 5vh;
+}
