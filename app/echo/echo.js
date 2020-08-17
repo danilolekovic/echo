@@ -38,6 +38,28 @@ var loadDecks = function() {
     });
 };
 
+var nextCard = function() {
+  if (cardIndex + 1 >= cards.length) {
+    $(".card-initial").hide();
+    $(".card-revealed").hide();
+    $(".cards-done").show();
+    $(".decks").show();
+    cardIndex = 0;
+  } else {
+    $(".card-revealed").hide();
+    cardIndex++;
+    $(".card-count").html(
+      '<span id="card-now"><span id="card-now-dot">&middot;</span>' +
+        (cardIndex + 1) +
+        '</span><span id="card-total">/' +
+        cards.length +
+        "</span>"
+    );
+
+    showCard();
+  }
+};
+
 var prepareFlip = function() {
     $(".card-answer-btns").html(
       '<a href="#" class="answer-btn" id="easy">Easy</a><a href="#" class="answer-btn" id="good">Good</a><a href="#" class="answer-btn" id="hard">Hard</a>'
@@ -74,6 +96,16 @@ var prepareChoice = function() {
   });
 
   $(".card-answer-btns").html(builder);
+
+  $(".answer-btn-choice").on("click", function() {
+    if ($(this).html().toLowerCase() == cards[cardIndex]["answer"]) {
+      alert("Correct!");
+    } else {
+      alert("Wrong!");
+    }
+
+    nextCard();
+  });
 };
 
 var prepareEnter = function() {
@@ -89,24 +121,7 @@ var prepareEnter = function() {
         alert("Wrong!");
       }
 
-      if (cardIndex + 1 >= cards.length) {
-        $(".card-initial").hide();
-        $(".card-revealed").hide();
-        $(".cards-done").show();
-        $(".decks").show();
-        cardIndex = 0;
-      } else {
-        $(".card-revealed").hide();
-        cardIndex++;
-        $(".card-count").html(
-          '<span id="card-now"><span id="card-now-dot">&middot;</span>' +
-            (cardIndex + 1) +
-            '</span><span id="card-total">/' +
-            cards.length +
-            "</span>"
-        );
-        showCard();
-      }
+      nextCard();
     }
   });
 };
@@ -163,24 +178,7 @@ $(".go-back").on("click", function() {
 });
 
 $(".answer-btn").on("click", function () {
-  if (cardIndex + 1 >= cards.length) {
-    $(".card-initial").hide();
-    $(".card-revealed").hide();
-    $(".cards-done").show();
-    $(".decks").show();
-    cardIndex = 0;
-  } else {
-    $(".card-revealed").hide();
-    cardIndex++;
-    $(".card-count").html(
-      '<span id="card-now"><span id="card-now-dot">&middot;</span>' +
-        (cardIndex + 1) +
-        '</span><span id="card-total">/' +
-        cards.length +
-        "</span>"
-    );
-    showCard();
-  }
+  nextCard();
 });
 
 loadDecks();

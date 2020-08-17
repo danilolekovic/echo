@@ -98,3 +98,12 @@ a:active {
 .answer-btn {
     margin-right: 3vh;
 }
+
+.answer-btn-choice {
+    padding: 1.5em;
+    background-color: #f2f2f2; 
+    color: #454443;
+    border-radius: 5px;
+    display: block;
+    margin-top: 4vh;
+}
