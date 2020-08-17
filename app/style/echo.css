@@ -116,7 +116,7 @@ a:active {
     border-top: none;
     border-left: none;
     border-right: none;
-    font-size: 20px;
+    font-size: 24px;
     border-bottom: cornflowerblue 2px solid;
     background-color: white;
 }
@@ -126,8 +126,7 @@ a:active {
     border-top: none;
     border-left: none;
     border-right: none;
-    background-color: rgba(0, 116, 217, 0.171);
-    border-bottom: cornflowerblue 2px solid;
+    border-bottom: rgba(0, 116, 217, 0.171) 2px solid;
 }
 
 i {

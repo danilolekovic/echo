@@ -20,6 +20,7 @@
 - Node.js: app backend
 - jQuery: DOM manipulation, animations, etc.
 - Cal-Heatmap: informative heatmap on main page
+- css.gg: css icons
 
 ### Contribution
 

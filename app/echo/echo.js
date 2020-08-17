@@ -18,6 +18,25 @@ cal.init({
   legend: [2, 4, 6, 8]
 });
 
+// helper function from animate.css
+const animateCSS = (element, animation, prefix = "animate__") =>
+  new Promise((resolve, reject) => {
+    const animationName = `${prefix}${animation}`;
+    const node = document.querySelector(element);
+
+    node.classList.add(`${prefix}animated`, animationName);
+
+    function handleAnimationEnd() {
+      node.classList.remove(`${prefix}animated`, animationName);
+      node.removeEventListener("animationend", handleAnimationEnd);
+
+      resolve("Animation ended");
+    }
+
+    node.addEventListener("animationend", handleAnimationEnd);
+  }
+);
+
 var loadDecks = function() {
     fs.readdir("data", function(err, files) {
       if (err) {
@@ -101,8 +120,8 @@ var prepareChoice = function() {
     if ($(this).html().toLowerCase() == cards[cardIndex]["answer"]) {
       // change this to class
       $(this).css("background-color", "#2ECC40");
-      alert("Correct!");
-      nextCard();
+      e.preventDefault();
+      setTimeout(nextCard, 500);
     } else {
       e.preventDefault();
 
@@ -120,14 +139,15 @@ var prepareEnter = function() {
 
   $("#card-answer").on("keyup", function (e) {
     if (e.key === "Enter" || e.keyCode === 13) {
-      // change alerts to timer.sleep() and background color
       if ($(this).val().toLowerCase() == cards[cardIndex]["answer"]) {
-        alert("Correct!");
+        // change this to class
+        $(this).css("border-bottom-color", "#2ECC40");
+        e.preventDefault();
+        setTimeout(nextCard, 500);
       } else {
-        alert("Wrong!");
+        // change this to class
+        $(this).css("border-bottom-color", "#FF4136");
       }
-
-      nextCard();
     }
   });
 };
