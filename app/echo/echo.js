@@ -30,7 +30,7 @@ var loadDecks = function() {
 
         $(".decks-list").append("<li><a href=\"#\" class=\"deck-selector\" deck=\"" + file.split(".json")[0] + "\">" + json["name"] + "</a></li>");
         
-        $(".deck-selector").on("click", function () {
+        $(".deck-selector").on("click", function() {
           deck = $(this).attr("deck");
           selectDeck(deck);
         });
@@ -39,16 +39,49 @@ var loadDecks = function() {
 };
 
 var prepareFlip = function() {
+    $(".card-answer-btns").html(
+      '<a href="#" class="answer-btn" id="easy">Easy</a><a href="#" class="answer-btn" id="good">Good</a><a href="#" class="answer-btn" id="hard">Hard</a>'
+    );
 
+
+  $(".answer-btn").on("click", function () {
+    if (cardIndex + 1 >= cards.length) {
+      $(".card-initial").hide();
+      $(".card-revealed").hide();
+      $(".cards-done").show();
+      $(".decks").show();
+      cardIndex = 0;
+    } else {
+      $(".card-revealed").hide();
+      cardIndex++;
+      $(".card-count").html(
+        '<span id="card-now"><span id="card-now-dot">&middot;</span>' +
+          (cardIndex + 1) +
+          '</span><span id="card-total">/' +
+          cards.length +
+          "</span>"
+      );
+      showCard();
+    }
+  });
 };
 
 var prepareChoice = function() {
+  let builder = "";
 
+  cards[cardIndex]["choices"].forEach(function(item) {
+    builder +=
+      '<a href="#" class="answer-btn-choice">' + item + "</a>";
+  });
+
+  $(".card-answer-btns").html(builder);
 };
 
 var prepareEnter = function() {
-
-}
+  $(".card-answer-btns").html(
+    '<input type="text" id="card-answer" name="card-answer">'
+  );
+};
 
 var selectDeck = function(deck) {
     rawdata = fs.readFileSync("./data/" + deck + ".json");
@@ -61,10 +94,31 @@ var selectDeck = function(deck) {
 };
 
 var showCard = function() {
+  if (cards[cardIndex]["type"] == "flip") {
     $(".card-question").html(cards[cardIndex]["question"]);
     $(".card-answer").html(cards[cardIndex]["answer"]);
     $(".card-initial").show();
     $(".card").show();
+    $("#check").show();
+    $(".card-revealed").hide();
+    prepareFlip();
+  } else if (cards[cardIndex]["type"] == "choice") {
+    $(".card-question").html(cards[cardIndex]["question"]);
+    $(".card-answer").html("");
+    $(".card-initial").show();
+    $(".card").show();
+    $("#check").hide();
+    $(".card-revealed").show();
+    prepareChoice();
+  } else if (cards[cardIndex]["type"] == "enter") {
+    $(".card-question").html(cards[cardIndex]["question"]);
+    $(".card-answer").html("");
+    $(".card-initial").show();
+    $(".card").show();
+    $("#check").hide();
+    $(".card-revealed").show();
+    prepareEnter();
+  }
 };
 
 $("#check").on("click", function() {
