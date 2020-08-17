@@ -49,6 +49,18 @@ body {
     margin: 5vh;
 }
 
+#card-now {
+    font-size: 20px;
+    display: block;
+    color: #000;
+    font-family: robotoBold;
+}
+
+#card-total {
+    color: rgb(199, 199, 199);
+    font-size: 12px;
+}
+
 #heatmap {
     position: fixed;
     bottom: 10vh;

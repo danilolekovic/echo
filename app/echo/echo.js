@@ -47,13 +47,13 @@ var prepareChoice = function() {
 };
 
 var prepareEnter = function() {
-    
+
 }
 
 var selectDeck = function(deck) {
     rawdata = fs.readFileSync("./data/" + deck + ".json");
     cards = JSON.parse(rawdata)["cards"];
-    $(".card-count").html((cardIndex + 1) + "/" + cards.length);
+    $(".card-count").html("<span id=\"card-now\">" + (cardIndex + 1) + "</span><span id=\"card-total\">/" + cards.length + "</span>");
     cardIndex = 0;
     $(".decks").hide();
     $(".cards-done").hide();
@@ -89,7 +89,7 @@ $(".answer-btn").on("click", function () {
   } else {
     $(".card-revealed").hide();
     cardIndex++;
-    $(".card-count").html(cardIndex + 1 + "/" + cards.length);
+    $(".card-count").html("<span id=\"card-now\">" + (cardIndex + 1) + "</span><span id=\"card-total\">/" + cards.length + "</span>");
     showCard();
   }
 });
