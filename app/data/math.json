@@ -4,16 +4,23 @@
     {
       "question": "What is 2 + 2?",
       "answer": "4",
+      "type": "enter",
+      "repeats": 0,
       "tags": ["math", "adding"]
     },
     {
       "question": "What is 4 + 2?",
       "answer": "6",
+      "type": "enter",
+      "repeats": 0,
       "tags": ["math", "adding"]
     },
     {
       "question": "What is 2 + 10?",
       "answer": "12",
+      "choices": ["12", "6", "18", "20"],
+      "type": "choice",
+      "repeats": 0,
       "tags": ["math", "adding"]
     }
   ]

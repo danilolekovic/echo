@@ -38,6 +38,18 @@ var loadDecks = function() {
     });
 };
 
+var prepareFlip = function() {
+
+};
+
+var prepareChoice = function() {
+
+};
+
+var prepareEnter = function() {
+    
+}
+
 var selectDeck = function(deck) {
     rawdata = fs.readFileSync("./data/" + deck + ".json");
     cards = JSON.parse(rawdata)["cards"];

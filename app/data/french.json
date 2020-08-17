@@ -4,16 +4,22 @@
     {
       "question": "Parler",
       "answer": "To speak",
+      "type": "flip",
+      "repeats": 0,
       "tags": ["french", "verbs"]
     },
     {
       "question": "Manger",
       "answer": "To eat",
+      "type": "flip",
+      "repeats": 0,
       "tags": ["french", "verbs"]
     },
     {
       "question": "Formidable",
       "answer": "Wonderful",
+      "type": "flip",
+      "repeats": 0,
       "tags": ["french", "noun"]
     }
   ]

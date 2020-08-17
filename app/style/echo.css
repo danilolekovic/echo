@@ -1,9 +1,33 @@
+@font-face {
+    font-family: robotoLight;
+    src: url(../lib/fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: robotThin;
+    src: url(../lib/fonts/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: robotoBold;
+    src: url(../lib/fonts/Roboto-Bold.ttf);
+}
+
+body {
+    font-family: robotoLight;
+}
+
 .card-revealed {
     display: none;
 }
 
 .card {
     text-align: center;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    padding: 5vh;
+    border-radius: 20px;
     display: none;
 }
 
