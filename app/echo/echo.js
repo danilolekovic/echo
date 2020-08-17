@@ -43,7 +43,6 @@ var prepareFlip = function() {
       '<a href="#" class="answer-btn" id="easy">Easy</a><a href="#" class="answer-btn" id="good">Good</a><a href="#" class="answer-btn" id="hard">Hard</a>'
     );
 
-
   $(".answer-btn").on("click", function () {
     if (cardIndex + 1 >= cards.length) {
       $(".card-initial").hide();
@@ -81,6 +80,35 @@ var prepareEnter = function() {
   $(".card-answer-btns").html(
     '<input type="text" id="card-answer" name="card-answer">'
   );
+
+  $("#card-answer").on("keyup", function (e) {
+    if (e.key === "Enter" || e.keyCode === 13) {
+      if ($(this).val().toLowerCase() == cards[cardIndex]["answer"]) {
+        alert("Correct!");
+      } else {
+        alert("Wrong!");
+      }
+
+      if (cardIndex + 1 >= cards.length) {
+        $(".card-initial").hide();
+        $(".card-revealed").hide();
+        $(".cards-done").show();
+        $(".decks").show();
+        cardIndex = 0;
+      } else {
+        $(".card-revealed").hide();
+        cardIndex++;
+        $(".card-count").html(
+          '<span id="card-now"><span id="card-now-dot">&middot;</span>' +
+            (cardIndex + 1) +
+            '</span><span id="card-total">/' +
+            cards.length +
+            "</span>"
+        );
+        showCard();
+      }
+    }
+  });
 };
 
 var selectDeck = function(deck) {
