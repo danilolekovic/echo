@@ -82,3 +82,19 @@ a:active {
     position: fixed;
     bottom: 10vh;
 }
+
+#easy {
+    color: #2ECC40;
+}
+
+#good {
+    color: #0074D9;
+}
+
+#hard {
+    color: #FF4136;
+}
+
+.answer-btn {
+    margin-right: 3vh;
+}
