@@ -120,6 +120,7 @@ var prepareEnter = function() {
 
   $("#card-answer").on("keyup", function (e) {
     if (e.key === "Enter" || e.keyCode === 13) {
+      // change alerts to timer.sleep() and background color
       if ($(this).val().toLowerCase() == cards[cardIndex]["answer"]) {
         alert("Correct!");
       } else {
