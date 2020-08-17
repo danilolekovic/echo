@@ -15,6 +15,17 @@
 
 body {
     font-family: robotoLight;
+    background-color: #f2f2f2;
+    color: #454443;
+}
+
+a {
+    color: #5a5a5a;
+    text-decoration: none;
+}
+
+a:active {
+    color: #454443;
 }
 
 .card-revealed {
@@ -27,8 +38,10 @@ body {
     height: 50%;
     margin: 0 auto;
     padding: 5vh;
+    margin-top: 5vh;
     border-radius: 20px;
     display: none;
+    background-color: #fcfcfc;
 }
 
 .cards-done {
@@ -50,15 +63,19 @@ body {
 }
 
 #card-now {
-    font-size: 20px;
+    font-size: 30px;
     display: block;
-    color: #000;
+    color: #444343;
     font-family: robotoBold;
 }
 
+#card-now-dot {
+    color: #ff6340;
+}
+
 #card-total {
-    color: rgb(199, 199, 199);
-    font-size: 12px;
+    color: #d4d4d3;
+    font-size: 18px;
 }
 
 #heatmap {
