@@ -7,16 +7,17 @@
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="./style/echo.css">
     <link rel="stylesheet" href="./lib/cal-heatmap.css">
+    <link rel="stylesheet" href="./lib/icons.css">
     <script src="./lib/cal-heatmap.min.js"></script>
 </head>
 
 <body>
     <div class="card">
         <div class="card-initial">
-            <h4 class="go-back"><a href="#">Back</a></h4>
+            <h4 class="go-back"><a href="#"><i class="gg-arrow-left-r"></i></a></h4>
             <h4 class="card-count"></h4>
             <h2 class="card-question">Question?</h2>
-            <a href="#" id="check">Check</a>
+            <a href="#" id="check"><i class="gg-check-o"></i></a>
         </div>
 
         <div class="card-revealed">
@@ -28,14 +29,14 @@
                 <a href="#" class="answer-btn" id="hard">Hard</a>
             </div>
         </div>
+    </div>
 
-        <div class="cards-done">
-            <h1>Good job! All your cards are done for now.</h1>
-        </div>
+    <div class="cards-done">
+        <h1><i class="gg-check-o"></i></h1>
     </div>
 
     <div class="decks">
-        <h2>Decks</h2>
+        <h2><i class="gg-folder"></i> Decks</h2>
         <ul class="decks-list">
         </ul>
         <div id="heatmap">

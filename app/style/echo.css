@@ -111,3 +111,25 @@ a:active {
 .answer-btn-choice:hover {
     opacity: 0.6;
 }
+
+#card-answer {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 20px;
+    border-bottom: cornflowerblue 2px solid;
+    background-color: white;
+}
+
+#card-answer:focus {
+    outline: none !important;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: rgba(0, 116, 217, 0.171);
+    border-bottom: cornflowerblue 2px solid;
+}
+
+i {
+    display: inline-block !important;
+}
