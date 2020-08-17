@@ -39,7 +39,7 @@ a:active {
     margin: 0 auto;
     padding: 5vh;
     margin-top: 5vh;
-    border-radius: 20px;
+    border-radius: 10px;
     display: none;
     background-color: #fcfcfc;
 }
@@ -106,4 +106,8 @@ a:active {
     border-radius: 5px;
     display: block;
     margin-top: 4vh;
+}
+
+.answer-btn-choice:hover {
+    opacity: 0.6;
 }

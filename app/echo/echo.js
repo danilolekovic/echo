@@ -97,14 +97,19 @@ var prepareChoice = function() {
 
   $(".card-answer-btns").html(builder);
 
-  $(".answer-btn-choice").on("click", function() {
+  $(".answer-btn-choice").on("click", function(e) {
     if ($(this).html().toLowerCase() == cards[cardIndex]["answer"]) {
+      // change this to class
+      $(this).css("background-color", "#2ECC40");
       alert("Correct!");
+      nextCard();
     } else {
-      alert("Wrong!");
-    }
+      e.preventDefault();
 
-    nextCard();
+      // change this to class
+      $(this).css("background-color", "#FF4136");
+      $(this).css("color", "#FFFFFF");
+    }
   });
 };
 
