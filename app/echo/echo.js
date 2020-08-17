@@ -75,6 +75,7 @@ $(".go-back").on("click", function() {
     $(".card-initial").hide();
     $(".card-revealed").hide();
     $(".cards-done").hide();
+    $(".card").hide();
     $(".decks").show();
     cardIndex = 0;
 });
