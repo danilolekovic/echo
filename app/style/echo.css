@@ -24,3 +24,8 @@
     left: 0;
     margin: 5vh;
 }
+
+#heatmap {
+    position: fixed;
+    bottom: 10vh;
+}

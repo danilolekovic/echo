@@ -5,6 +5,19 @@ let rawdata = fs.readFileSync("./data/math.json");
 let cards = JSON.parse(rawdata)["cards"];
 var cardIndex = 0;
 
+var cal = new CalHeatMap();
+cal.init({
+  itemSelector: "#cal-heatmap",
+  domain: "month",
+  subDomain: "day",
+  data: { },
+  start: new Date(2020, 0, 1),
+  cellSize: 10,
+  range: 12,
+
+  legend: [2, 4, 6, 8]
+});
+
 var loadDecks = function() {
     fs.readdir("data", function(err, files) {
       if (err) {

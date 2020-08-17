@@ -6,6 +6,8 @@
     <title>Echo</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="./style/echo.css">
+    <link rel="stylesheet" href="./lib/cal-heatmap.css">
+    <script src="./lib/cal-heatmap.min.js"></script>
 </head>
 
 <body>
@@ -34,6 +36,9 @@
         <h2>Decks</h2>
         <ul class="decks-list">
         </ul>
+        <div id="heatmap">
+            <div id="cal-heatmap"></div>
+        </div>
     </div>
 
     <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>

@@ -29,5 +29,8 @@
   "homepage": "https://github.com/danilolekovic/echo#readme",
   "devDependencies": {
     "electron": "^9.2.0"
+  },
+  "dependencies": {
+    "d3": "^3.5.6"
   }
 }
