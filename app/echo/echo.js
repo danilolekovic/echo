@@ -14,7 +14,6 @@ cal.init({
   start: new Date(2020, 0, 1),
   cellSize: 10,
   range: 12,
-
   legend: [2, 4, 6, 8]
 });
 
@@ -176,7 +175,16 @@ var selectDeck = function(deck) {
 };
 
 var showCard = function() {
-  if (cards[cardIndex]["type"] == "flip") {
+  if (cards.length == 0) {
+    alert("This deck is empty.");
+    $(".card-initial").hide();
+    $(".card-revealed").hide();
+    $(".card").hide();
+    $(".cards-done").hide();
+    $(".decks").show();
+    $("#heatmap").show();
+    $(".decks-header").show();
+  } else if (cards[cardIndex]["type"] == "flip") {
     $(".card-question").html(cards[cardIndex]["question"]);
     $(".card-answer").html(cards[cardIndex]["answer"]);
     $(".card-initial").show();
