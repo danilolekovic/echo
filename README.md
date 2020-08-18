@@ -5,7 +5,7 @@
 <h2>a memorization app, for improving your retention and learning</h2>
 
 <div>
-    <img src="https://i.imgur.com/B2ZzecD.gif" height=400>
+    <img src="https://i.imgur.com/H0CPUoK.gif" height=400>
 </div>
 </div>
 
