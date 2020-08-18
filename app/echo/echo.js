@@ -127,8 +127,7 @@ var prepareCloze = function() {
   $(".card-answer-cloze").on("keyup", function (e) {
     if (e.key === "Enter" || e.keyCode === 13) {
       if ($(this).val().toLowerCase() == $(this).attr("answer").toLowerCase()) {
-        $(this).css("background-color", "#2ECC40");
-        $(this).css("opacity", "0.6");
+        $(this).css("border-bottom", "#2ECC40");
 
         if ($(this).attr("answered") == "false") {
           answered++;
@@ -150,8 +149,7 @@ var prepareCloze = function() {
 
   $(".card-answer-cloze").on("input", function (e) {
     if ($(this).val().toLowerCase() == $(this).attr("answer").toLowerCase()) {
-      $(this).css("background-color", "#2ECC40");
-      $(this).css("opacity", "0.6");
+      $(this).css("border-bottom-color", "#2ECC40");
       
       if ($(this).attr("answered") == "false") {
         answered++;

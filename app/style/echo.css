@@ -41,7 +41,7 @@ a:active {
     margin-top: 5vh;
     border-radius: 10px;
     display: none;
-    background-color: #fcfcfc;
+    background-color: #fff;
 }
 
 .cards-done {
@@ -132,15 +132,22 @@ a:active {
 }
 
 .card-answer-cloze {
-    background-color: rgba(0, 116, 217, 0.171);
-    border: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #000 2px solid;
+    outline: none !important;
     padding: 4px;
 }
 
 .card-answer-cloze:focus {
+    border-top: none;
+    border-left: none;
+    border-right: none;
     outline: none !important;
     background-color: #fcfcfc;
-    border: rgba(0, 116, 217, 0.171) 2px solid;
+    border-bottom: rgba(0, 116, 217, 0.171) 2px solid;
+    padding: 4px;
 }
 
 i {
