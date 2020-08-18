@@ -3,6 +3,11 @@
     <img src="https://i.imgur.com/aOOGMXr.png">
 </p>
 <h2>a memorization app, for improving your retention and learning</h2>
+
+<div>
+    <img src="https://i.imgur.com/U9Ha7pc.png" style="display:inline-block" height=200>
+    <img src="https://i.imgur.com/SHXG841.png" style="display:inline-block" height=200>
+</div>
 </div>
 
 ### Information
