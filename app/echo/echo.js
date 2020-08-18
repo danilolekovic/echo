@@ -5,53 +5,55 @@ let rawdata = fs.readFileSync("./data/math.json");
 let cards = JSON.parse(rawdata)["cards"];
 var cardIndex = 0;
 
-var cal = new CalHeatMap();
-cal.init({
-  itemSelector: "#cal-heatmap",
-  domain: "month",
-  subDomain: "day",
-  data: { },
-  start: new Date(2020, 0, 1),
-  cellSize: 10,
-  range: 8,
-  legend: [2, 4, 6, 8]
-});
-
 var loadDecks = function() {
-    fs.readdir("data", function(err, files) {
-      if (err) {
-        return console.log("Unable to scan directory: " + err);
-      }
+  let echoData = require("./db/echo.json");
 
-      files.forEach(function(file) {
-        let contents = fs.readFileSync("./data/" + file);
-        let json = JSON.parse(contents);
+  var cal = new CalHeatMap();
+  cal.init({
+    itemSelector: "#cal-heatmap",
+    domain: "month",
+    subDomain: "day",
+    data: echoData["heatmap"],
+    start: new Date(2020, 0, 1),
+    cellSize: 10,
+    range: 8,
+    legend: [2, 4, 6, 8],
+  });
 
-        $(".decks").prepend(
-          '<div class="deck-card">' +
-            '<h2 class="deck-selector-head"><a href="#" class="deck-selector" deck="' +
-            file.split(".json")[0] +
-            '">' +
-            json["emoji"] +
-            " " +
-            json["name"] +
-            "</a></h2><hr>" +
-            "<p><i class=\"gg-align-bottom\"></i> Contains <span style='color:#2ECC40'><span style='color:#0074D9'>" +
-            json["cards"].length +
-            "</span> cards</p>" +
-            "<p><i class=\"gg-bolt\"></i> Your retention rate is <span style='color:#2ECC40'>100%</span></p>" +
-            "<hr><p><i class=\"gg-open-collective\"></i> <a href='#'>Study</a> &middot; " +
-            "<a href='#'>Cram</a> &middot; " +
-            "<a href='#'>Quiz</a></p>" +
-            "</div>"
-        );
-        
-        $(".deck-selector").on("click", function() {
-          deck = $(this).attr("deck");
-          selectDeck(deck);
-        });
+  fs.readdir("data", function(err, files) {
+    if (err) {
+      return console.log("Unable to scan directory: " + err);
+    }
+
+    files.forEach(function(file) {
+      let contents = fs.readFileSync("./data/" + file);
+      let json = JSON.parse(contents);
+
+      $(".decks").prepend(
+        '<div class="deck-card">' +
+          '<h2 class="deck-selector-head"><a href="#" class="deck-selector" deck="' +
+          file.split(".json")[0] +
+          '">' +
+          json["emoji"] +
+          " " +
+          json["name"] +
+          "</a></h2><hr>" +
+          "<p><i class=\"gg-align-bottom\"></i> Contains <span style='color:#2ECC40'><span style='color:#0074D9'>" +
+          json["cards"].length +
+          "</span> cards</p>" +
+          "<p><i class=\"gg-bolt\"></i> Your retention rate is <span style='color:#2ECC40'>100%</span></p>" +
+          "<hr><p><i class=\"gg-open-collective\"></i> <a href='#'>Study</a> &middot; " +
+          "<a href='#'>Cram</a> &middot; " +
+          "<a href='#'>Quiz</a></p>" +
+          "</div>"
+      );
+      
+      $(".deck-selector").on("click", function() {
+        deck = $(this).attr("deck");
+        selectDeck(deck);
       });
     });
+  });
 };
 
 var deckComplete = function() {
@@ -63,6 +65,20 @@ var deckComplete = function() {
   $(".decks").show();
   $("#heatmap").show();
   $(".decks-header").show();
+};
+
+var saveHeatmap = function() {
+  let echoData = require("./db/echo.json");
+  
+  var currentDate = Math.floor(new Date().getTime() / 1000).toString();
+
+  if (echoData["heatmap"].hasOwnProperty(currentDate)) {
+    echoData["heatmap"][currentDate] = echoData["heatmap"][currentDate] + 1;
+  } else {
+    echoData["heatmap"][currentDate] = 1;
+  }
+
+  fs.writeFileSync("./db/echo.json", JSON.stringify(echoData));
 };
 
 var nextCard = function() {
@@ -81,6 +97,8 @@ var nextCard = function() {
     );
 
     showCard();
+
+    saveHeatmap();
   }
 };
 
