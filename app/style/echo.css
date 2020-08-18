@@ -15,7 +15,7 @@
 
 body {
     font-family: robotoLight;
-    background-color: #f2f2f2;
+    background-color: #fff;
     color: #454443;
 }
 
@@ -81,6 +81,8 @@ a:active {
 #heatmap {
     position: fixed;
     bottom: 10vh;
+    left: 50%;
+    margin-left: -258px;
 }
 
 #easy {
@@ -118,7 +120,7 @@ a:active {
     border-right: none;
     font-size: 24px;
     border-bottom: cornflowerblue 2px solid;
-    background-color: white;
+    background-color: transparent;
 }
 
 #card-answer:focus {
@@ -146,7 +148,19 @@ i {
 }
 
 .decks-header {
-    margin-left: 4vh;
+    text-align: center;
+    margin-bottom: 6vh;
+}
+
+.decks-header hr {
+    display: inline-block;
+    width: 40%;
+    margin: 5px 10px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.deck-selector-head {
+    text-align: center;
 }
 
 .decks {
@@ -161,6 +175,7 @@ i {
     border: 2px solid #e7e7e7;
     border-radius: 4px;
     padding: .5rem;
+    background-color: #fcfcfc;
 }
 
 .deck-card p {
@@ -169,4 +184,35 @@ i {
 
 .deck-card p i {
     margin-right: 1vh;
+}
+
+.deck-card hr {
+    opacity: 0.4;
+}
+
+.deck-card-add {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    margin-right: 2vh;
+    justify-content: left;
+    align-items: center;
+}
+
+.deck-card-add h1 {
+    height: 40%;
+    opacity: 0.6;
+}
+
+.deck-card-add h1:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.deck-card-add h1:before {
+    top: 50%;
+}
+
+.deck-card-add h1:after {
+    top: 45.3%;
 }
