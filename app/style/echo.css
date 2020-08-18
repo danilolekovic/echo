@@ -152,3 +152,11 @@ i {
     border-radius: 4px;
     padding: .5rem;
 }
+
+.deck-card p {
+    margin-left: 1vh;
+}
+
+.deck-card p i {
+    margin-right: 1vh;
+}

@@ -3,23 +3,28 @@
   "emoji": "🇫🇷",
   "cards": [
     {
-      "question": "Parler",
-      "answer": "To speak",
-      "type": "flip",
+      "question": "To speak",
+      "answer": "Parler",
+      "type": "enter",
       "repeats": 0,
       "tags": ["french", "verbs"]
     },
     {
       "question": "Manger",
       "answer": "To eat",
-      "type": "flip",
+      "choices": [
+        "To eat",
+        "To sing",
+        "To Dance"
+      ],
+      "type": "choice",
       "repeats": 0,
       "tags": ["french", "verbs"]
     },
     {
-      "question": "Formidable",
-      "answer": "Wonderful",
-      "type": "flip",
+      "question": "Formidable = Wonderful",
+      "answer": "True",
+      "type": "bool",
       "repeats": 0,
       "tags": ["french", "noun"]
     }

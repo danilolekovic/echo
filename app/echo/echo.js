@@ -30,6 +30,9 @@ var loadDecks = function() {
         $(".decks").append(
           "<div class=\"deck-card\">" +
           "<h2><a href=\"#\" class=\"deck-selector\" deck=\"" + file.split(".json")[0] + "\">" + json["emoji"] + " " + json["name"] + "</a></h2>" +
+          "<p><i class=\"gg-align-bottom\"></i> Contains <span styl0074D9e='color:#2ECC40'><span style='color:#0074D9'>" + json["cards"].length +
+          "</span> cards</p>" + 
+          "<p><i class=\"gg-bolt\"></i> Your retention rate is <span style='color:#2ECC40'>100%</span></p>" +
           "</div>"
         );
         
