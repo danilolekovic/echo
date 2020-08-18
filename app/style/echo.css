@@ -112,8 +112,6 @@ a:active {
     opacity: 0.6;
 }
 
-
-
 #card-answer {
     border-top: none;
     border-left: none;
@@ -133,4 +131,24 @@ a:active {
 
 i {
     display: inline-block !important;
+}
+
+/* decks */
+
+.decks-header {
+    margin-left: 4vh;
+}
+
+.decks {
+    margin-left: 6vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 1.5rem;
+}
+  
+.deck-card {
+    border: 2px solid #e7e7e7;
+    border-radius: 4px;
+    padding: .5rem;
 }

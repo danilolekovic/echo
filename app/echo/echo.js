@@ -18,25 +18,6 @@ cal.init({
   legend: [2, 4, 6, 8]
 });
 
-// helper function from animate.css
-const animateCSS = (element, animation, prefix = "animate__") =>
-  new Promise((resolve, reject) => {
-    const animationName = `${prefix}${animation}`;
-    const node = document.querySelector(element);
-
-    node.classList.add(`${prefix}animated`, animationName);
-
-    function handleAnimationEnd() {
-      node.classList.remove(`${prefix}animated`, animationName);
-      node.removeEventListener("animationend", handleAnimationEnd);
-
-      resolve("Animation ended");
-    }
-
-    node.addEventListener("animationend", handleAnimationEnd);
-  }
-);
-
 var loadDecks = function() {
     fs.readdir("data", function(err, files) {
       if (err) {
@@ -47,7 +28,11 @@ var loadDecks = function() {
         let contents = fs.readFileSync("./data/" + file);
         let json = JSON.parse(contents);
 
-        $(".decks-list").append("<li><a href=\"#\" class=\"deck-selector\" deck=\"" + file.split(".json")[0] + "\">" + json["name"] + "</a></li>");
+        $(".decks").append(
+          "<div class=\"deck-card\">" +
+          "<h2><a href=\"#\" class=\"deck-selector\" deck=\"" + file.split(".json")[0] + "\">" + json["emoji"] + " " + json["name"] + "</a></h2>" +
+          "</div>"
+        );
         
         $(".deck-selector").on("click", function() {
           deck = $(this).attr("deck");
@@ -57,12 +42,20 @@ var loadDecks = function() {
     });
 };
 
+var deckComplete = function() {
+  alert("Deck completed!");
+  $(".card-initial").hide();
+  $(".card-revealed").hide();
+  $(".card").hide();
+  $(".cards-done").hide();
+  $(".decks").show();
+  $("#heatmap").show();
+  $(".decks-header").show();
+};
+
 var nextCard = function() {
   if (cardIndex + 1 >= cards.length) {
-    $(".card-initial").hide();
-    $(".card-revealed").hide();
-    $(".cards-done").show();
-    $(".decks").show();
+    deckComplete();
     cardIndex = 0;
   } else {
     $(".card-revealed").hide();
@@ -86,10 +79,7 @@ var prepareFlip = function() {
 
   $(".answer-btn").on("click", function () {
     if (cardIndex + 1 >= cards.length) {
-      $(".card-initial").hide();
-      $(".card-revealed").hide();
-      $(".cards-done").show();
-      $(".decks").show();
+      deckComplete();
       cardIndex = 0;
     } else {
       $(".card-revealed").hide();
@@ -179,6 +169,8 @@ var selectDeck = function(deck) {
     $(".card-count").html("<span id=\"card-now\"><span id=\"card-now-dot\">&middot;</span>" + (cardIndex + 1) + "</span><span id=\"card-total\">/" + cards.length + "</span>");
     cardIndex = 0;
     $(".decks").hide();
+    $("#heatmap").hide();
+    $(".decks-header").hide();
     $(".cards-done").hide();
     showCard();
 };
@@ -229,6 +221,8 @@ $(".go-back").on("click", function() {
     $(".cards-done").hide();
     $(".card").hide();
     $(".decks").show();
+    $("#heatmap").show();
+    $(".decks-header").show();
     cardIndex = 0;
 });
 
