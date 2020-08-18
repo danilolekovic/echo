@@ -98,6 +98,66 @@ var prepareFlip = function() {
   });
 };
 
+var prepareCloze = function() {
+  var regexp = /{{c([1-9]+)::(.*?)}}/g;
+  var answered = 0;
+  var clozes = 0;
+
+  $(".card-question").html(
+    cards[cardIndex]["question"].replace(
+      regexp,
+      '<input type="text" class="card-answer-cloze" name="card-answer" answered="false" answer="$2">'
+    )
+  );
+
+  clozes = cards[cardIndex]["question"].match(regexp).length;
+
+  $(".card-answer-btns").html("");
+
+  $(".card-answer-cloze").on("keyup", function (e) {
+    if (e.key === "Enter" || e.keyCode === 13) {
+      if ($(this).val().toLowerCase() == $(this).attr("answer").toLowerCase()) {
+        $(this).css("background-color", "#2ECC40");
+
+        if ($(this).attr("answered") == "false") {
+          answered++;
+          $(this).attr("answered", "true");
+          $(this).prop("disabled", true);
+        }
+
+        e.preventDefault();
+
+        if (answered == clozes) {
+          setTimeout(nextCard, 500);
+        }
+      } else {
+        // change this to class
+        $(this).css("border-bottom-color", "#FF4136");
+      }
+    }
+  });
+
+  $(".card-answer-cloze").on("change", function (e) {
+    if ($(this).val().toLowerCase() == $(this).attr("answer").toLowerCase()) {
+      $(this).css("background-color", "#2ECC40");
+      
+      if ($(this).attr("answered") == "false") {
+        answered++;
+        $(this).attr("answered", "true");
+        $(this).prop("disabled", true);
+      }
+
+      e.preventDefault();
+
+      console.log(answered + ":" + clozes);
+
+      if (answered == clozes) {
+        setTimeout(nextCard, 500);
+      }
+    }
+  });
+};
+
 var prepareChoice = function() {
   let builder = "";
 
@@ -219,6 +279,14 @@ var showCard = function() {
     $("#check").hide();
     $(".card-revealed").show();
     prepareBool();
+  } else if (cards[cardIndex]["type"] == "cloze") {
+    $(".card-question").html(cards[cardIndex]["question"]);
+    $(".card-answer").html("");
+    $(".card-initial").show();
+    $(".card").show();
+    $("#check").hide();
+    $(".card-revealed").show();
+    prepareCloze();
   }
 };
 

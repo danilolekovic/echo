@@ -10,6 +10,15 @@
       "tags": ["math", "adding"]
     },
     {
+      "question": "The + symbol is the symbol for {{c1::addition}}. The - symbol is the symbol for {{c2::subtraction}}.",
+      "type": "cloze",
+      "repeats": 0,
+      "tags": [
+        "math",
+        "adding"
+      ]
+    },
+    {
       "question": "What is 4 + 2?",
       "answer": "6",
       "type": "enter",

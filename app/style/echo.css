@@ -129,11 +129,21 @@ a:active {
     border-bottom: rgba(0, 116, 217, 0.171) 2px solid;
 }
 
+.card-answer-cloze {
+    background-color: rgba(0, 116, 217, 0.171);
+    border: none;
+    padding: 4px;
+}
+
+.card-answer-cloze:focus {
+    outline: none !important;
+    background-color: #fcfcfc;
+    border: rgba(0, 116, 217, 0.171) 2px solid;
+}
+
 i {
     display: inline-block !important;
 }
-
-/* decks */
 
 .decks-header {
     margin-left: 4vh;
