@@ -128,6 +128,7 @@ var prepareCloze = function() {
     if (e.key === "Enter" || e.keyCode === 13) {
       if ($(this).val().toLowerCase() == $(this).attr("answer").toLowerCase()) {
         $(this).css("background-color", "#2ECC40");
+        $(this).css("opacity", "0.6");
 
         if ($(this).attr("answered") == "false") {
           answered++;
@@ -147,9 +148,10 @@ var prepareCloze = function() {
     }
   });
 
-  $(".card-answer-cloze").on("change", function (e) {
+  $(".card-answer-cloze").on("input", function (e) {
     if ($(this).val().toLowerCase() == $(this).attr("answer").toLowerCase()) {
       $(this).css("background-color", "#2ECC40");
+      $(this).css("opacity", "0.6");
       
       if ($(this).attr("answered") == "false") {
         answered++;
@@ -179,7 +181,7 @@ var prepareChoice = function() {
   $(".card-answer-btns").html(builder);
 
   $(".answer-btn-choice").on("click", function(e) {
-    if ($(this).html().toLowerCase() == cards[cardIndex]["answer"]) {
+    if ($(this).html().toLowerCase() == cards[cardIndex]["answer"].toLowerCase()) {
       // change this to class
       $(this).css("background-color", "#2ECC40");
       e.preventDefault();
@@ -220,9 +222,24 @@ var prepareEnter = function() {
     '<input type="text" id="card-answer" name="card-answer">'
   );
 
-  $("#card-answer").on("keyup", function (e) {
-    if (e.key === "Enter" || e.keyCode === 13) {
-      if ($(this).val().toLowerCase() == cards[cardIndex]["answer"]) {
+  $("#card-answer")
+    .on("keyup", function (e) {
+      if (e.key === "Enter" || e.keyCode === 13) {
+        if ($(this).val().toLowerCase() == cards[cardIndex]["answer"].toLowerCase()) {
+          // change this to class
+          $(this).css("border-bottom-color", "#2ECC40");
+          e.preventDefault();
+          setTimeout(nextCard, 500);
+        } else {
+          // change this to class
+          $(this).css("border-bottom-color", "#FF4136");
+        }
+      }
+    });
+    $("#card-answer").on("input", function (e) {
+      if (
+        $(this).val().toLowerCase() == cards[cardIndex]["answer"].toLowerCase()
+      ) {
         // change this to class
         $(this).css("border-bottom-color", "#2ECC40");
         e.preventDefault();
@@ -231,8 +248,7 @@ var prepareEnter = function() {
         // change this to class
         $(this).css("border-bottom-color", "#FF4136");
       }
-    }
-  });
+    });
 };
 
 var selectDeck = function(deck) {
