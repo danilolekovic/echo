@@ -16,6 +16,16 @@
       "tags": ["math", "adding"]
     },
     {
+      "question": "7 x 7 = 49",
+      "answer": "True",
+      "type": "bool",
+      "repeats": 0,
+      "tags": [
+        "math",
+        "adding"
+      ]
+    },
+    {
       "question": "What is 2 + 10?",
       "answer": "12",
       "choices": ["12", "6", "18", "20"],

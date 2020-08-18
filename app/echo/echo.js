@@ -132,6 +132,27 @@ var prepareChoice = function() {
   });
 };
 
+var prepareBool = function () {
+  $(".card-answer-btns").html(
+    '<a href="#" class="answer-btn-bool">True</a><a href="#" class="answer-btn-bool">False</a>'
+  );
+
+  $(".answer-btn-bool").on("click", function (e) {
+    if ($(this).html() == cards[cardIndex]["answer"]) {
+      // change this to class
+      $(this).css("background-color", "#2ECC40");
+      e.preventDefault();
+      setTimeout(nextCard, 500);
+    } else {
+      e.preventDefault();
+
+      // change this to class
+      $(this).css("background-color", "#FF4136");
+      $(this).css("color", "#FFFFFF");
+    }
+  });
+};
+
 var prepareEnter = function() {
   $(".card-answer-btns").html(
     '<input type="text" id="card-answer" name="card-answer">'
@@ -187,6 +208,14 @@ var showCard = function() {
     $("#check").hide();
     $(".card-revealed").show();
     prepareEnter();
+  } else if (cards[cardIndex]["type"] == "bool") {
+    $(".card-question").html(cards[cardIndex]["question"]);
+    $(".card-answer").html("");
+    $(".card-initial").show();
+    $(".card").show();
+    $("#check").hide();
+    $(".card-revealed").show();
+    prepareBool();
   }
 };
 

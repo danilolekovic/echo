@@ -99,7 +99,7 @@ a:active {
     margin-right: 3vh;
 }
 
-.answer-btn-choice {
+.answer-btn-choice, .answer-btn-bool {
     padding: 1.5em;
     background-color: #f2f2f2; 
     color: #454443;
@@ -108,9 +108,11 @@ a:active {
     margin-top: 4vh;
 }
 
-.answer-btn-choice:hover {
+.answer-btn-choice:hover, .answer-btn-bool:hover {
     opacity: 0.6;
 }
+
+
 
 #card-answer {
     border-top: none;
