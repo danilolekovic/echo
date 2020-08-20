@@ -13,10 +13,12 @@
 
 **Echo** is an unreleased app for people who want to learn things quickly, efficiently and to retain what they learn. In other words, Echo is perfect for:
 
-- Students
-- Professors
-- Language Learners
-- People who just want to memorize something
+- :student: Students
+- :teacher: Professors
+- :brain: Language Learners
+- :man: People who just want to memorize something
+
+**Echo** utilizes a tweaked version of the [SM2 spaced-repetition algorithm](https://www.supermemo.com/en/archives1990-2015/english/ol/sm2). In Echo, not only are you able to efficiently memorize sets of information over time, but you can also quiz yourself and "cram" the information. It should be noted that out of these three, it is proven that spaced-repetition is the most effective.
 
 ### Libraries
 
