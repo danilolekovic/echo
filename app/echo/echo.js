@@ -70,7 +70,9 @@ var deckComplete = function() {
 var saveHeatmap = function() {
   let echoData = require("./db/echo.json");
   
-  var currentDate = Math.floor(new Date().getTime() / 1000).toString();
+  var currentDate = Math.floor(
+    new Date().setHours(0, 0, 0, 0) / 1000
+  ).toString();
 
   if (echoData["heatmap"].hasOwnProperty(currentDate)) {
     echoData["heatmap"][currentDate] = echoData["heatmap"][currentDate] + 1;
