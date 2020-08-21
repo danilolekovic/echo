@@ -7,12 +7,20 @@
       "answer": "4",
       "type": "enter",
       "repeats": 0,
+      "difficulty": 0.3,
+      "performanceRating": -1,
+      "daysBetweenReviews": 1,
+      "dateLastReviewed": "08/21/2020",
       "tags": ["math", "adding"]
     },
     {
       "question": "The + symbol is the symbol for {{c1::addition}}. The - symbol is the symbol for {{c2::subtraction}}.",
       "type": "cloze",
       "repeats": 0,
+      "difficulty": 0.3,
+      "performanceRating": -1,
+      "daysBetweenReviews": 1,
+      "dateLastReviewed": "08/21/2020",
       "tags": [
         "math",
         "adding"
@@ -23,6 +31,10 @@
       "answer": "6",
       "type": "enter",
       "repeats": 0,
+      "difficulty": 0.3,
+      "performanceRating": -1,
+      "daysBetweenReviews": 1,
+      "dateLastReviewed": "08/21/2020",
       "tags": ["math", "adding"]
     },
     {
@@ -30,6 +42,10 @@
       "answer": "True",
       "type": "bool",
       "repeats": 0,
+      "difficulty": 0.3,
+      "performanceRating": -1,
+      "daysBetweenReviews": 1,
+      "dateLastReviewed": "08/21/2020",
       "tags": [
         "math",
         "adding"
@@ -41,6 +57,10 @@
       "choices": ["12", "6", "18", "20"],
       "type": "choice",
       "repeats": 0,
+      "difficulty": 0.3,
+      "performanceRating": -1,
+      "daysBetweenReviews": 1,
+      "dateLastReviewed": "08/21/2020",
       "tags": ["math", "adding"]
     }
   ]

@@ -5,6 +5,8 @@ let rawdata = fs.readFileSync("./data/math.json");
 let cards = JSON.parse(rawdata)["cards"];
 var cardIndex = 0;
 
+/* deck functions */
+
 var loadDecks = function() {
   let echoData = require("./db/echo.json");
 
@@ -352,5 +354,69 @@ $(".go-back").on("click", function() {
 $(".answer-btn").on("click", function () {
   nextCard();
 });
+
+/* algo functions */
+
+var daysBetween = function(first, second) {
+  var getDate = function (d) {
+    var splits = str.split("/");
+    return new Date(splits[2], splits[0] - 1, splits[1]);
+  };
+
+  return Math.round((getDate(second) - getDate(first))/(1000*60*60*24));
+};
+
+var formatDate = function(date) {
+    var d = new Date(date),
+        month = "" + (d.getMonth() + 1),
+        day = "" + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) month = "0" + month;
+    if (day.length < 2) day = "0" + day;
+
+    return [month, day, year].join("-");
+};
+
+var repetitionAlgorithm = function(cardData) {
+  // how difficult the card is [0.0, 1.0
+  // default -> 0.3 for now
+  var difficulty = cardData["difficulty"];
+
+  // the current performance rating of the card
+  // if not attempted -> -1
+  let performanceRating = cardData["performanceRating"];
+
+  // how many days should go by between reviews of this card
+  let daysBetweenReviews = cardData["daysBetweenReviews"];
+
+  // the last date the card was reviewed
+  let dateLastReviewed = cardData["dateLastReviewed"]
+
+  // how many days have gone by since the last review
+  var daysSinceLast = daysBetween(dateLastReviewed, formatDate(new Date()));
+
+  // need to choose the top 10-20 cards, ordered by descending percentageOverdue
+  // todo: discard items reviewed in the past 8 hours
+  var percentOverdue;
+
+  // item attempted -> get performanceRating
+  // performanceRating is [0.0, 1.0], 1.0 = best
+  // cutoff for a correct answer is 0.6
+  if (performanceRating <= 0.6) {
+    percentOverdue = Math.min(2, daysSinceLast/daysBetweenReviews);
+  } else {
+    percentOverdue = 1;
+  }
+
+  difficulty += percentOverdue * (1/17) * (8 - 9 * performanceRating)
+  let difficultyWeight = 3 - 1.7 * difficulty;
+
+  if (performanceRating <= 0.6) {
+    daysBetweenReviews *= 1 + (difficultyWeight - 1) * percentOverdue;
+  } else {
+    daysBetweenReviews *= Math.max(1, 1/(Math.pow(difficultyWeight, 2)));
+  }
+};
 
 loadDecks();
