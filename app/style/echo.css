@@ -114,7 +114,7 @@ a:active {
     opacity: 0.6;
 }
 
-#card-answer {
+#card-answer, #deck-name {
     border-top: none;
     border-left: none;
     border-right: none;
@@ -123,7 +123,7 @@ a:active {
     background-color: transparent;
 }
 
-#card-answer:focus {
+#card-answer:focus, #deck-name:focus {
     outline: none !important;
     border-top: none;
     border-left: none;
@@ -222,4 +222,50 @@ i {
 
 .deck-card-add h1:after {
     top: 45.3%;
+}
+
+.deck-creation {
+    display: none;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    padding: 5vh;
+    margin-top: 5vh;
+}
+
+#deck-name {
+    font-size: 16px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.deck-creation-header {
+    text-align: center;
+    margin-bottom: 6vh;
+}
+
+.deck-creation-header hr {
+    display: inline-block;
+    width: 20%;
+    margin: 5px 10px;
+    border-top: 1px solid #e5e5e5;
+}
+
+div.tagsinput {
+    border: none !important;
+}
+
+div.tagsinput span.tag {
+    border-color: cornflowerblue !important;
+    background-color: rgba(0, 116, 217, 0.171) !important;
+    color: cornflowerblue !important;
+}
+
+.submit-button {
+    text-decoration: none;
+    border-color: cornflowerblue;
+    background-color: rgba(0, 116, 217, 0.171);
+    color: cornflowerblue;
+    padding: 1em 1.5em;
+    border-radius: 10px;
 }

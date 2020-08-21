@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style/echo.css">
     <link rel="stylesheet" href="./lib/cal-heatmap.css">
     <link rel="stylesheet" href="./lib/icons.css">
+    <link rel="stylesheet" href="./lib/jquery.tagsinput.min.css">
     <script src="./lib/cal-heatmap.min.js"></script>
 </head>
 
@@ -38,8 +39,7 @@
     <h2 class="decks-header"><hr /><i class="gg-folder"></i> Decks<hr /></h2>
     <div class="decks">
         <div class="deck-card deck-card-add">
-            <h1 class="gg-add"></h1>
-            <input type="text" class="deck-name" name="deck-name">
+            <h1 class="new-deck gg-add"></h1>
         </div>
     </div>
 
@@ -47,8 +47,16 @@
         <div id="cal-heatmap"></div>
     </div>
 
+    <div class="deck-creation">
+        <h2 class="deck-creation-header"><hr /><i class="gg-folder"></i> New Deck<hr /></h2>
+        <input type="text" name="deck-name" id="deck-name" placeholder="Name">
+        <input name="tags" id="tags" value="" />
+        <a href="#" class="submit-button">Create Deck</a>
+    </div>
+
     <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
     <script src="./lib/jquery.js"></script>
+    <script src="./lib/jquery.tagsinput.min.js"></script>
     <script src="./echo/echo.js"></script>
     <script>if (window.module) module = window.module;</script>
 </body>

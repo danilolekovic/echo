@@ -348,6 +348,11 @@ var showCard = function() {
   }
 };
 
+var init = function() {
+  $("#tags").tagsInput();
+  loadDecks();
+};
+
 // check button functionality for flip cards
 $("#check").on("click", function() {
     $(".card-revealed").show();
@@ -366,8 +371,15 @@ $(".go-back").on("click", function() {
 });
 
 // answer button functionality
-$(".answer-btn").on("click", function () {
+$(".answer-btn").on("click", function() {
   nextCard();
+});
+
+$(".new-deck").on("click", function() {
+  $(".decks").hide();
+  $(".decks-header").hide();
+  $("#heatmap").hide();
+  $(".deck-creation").show();
 });
 
 /* algo functions */
@@ -436,6 +448,8 @@ var repetitionAlgorithm = function(cardData) {
   } else {
     daysBetweenReviews *= Math.max(1, 1/(Math.pow(difficultyWeight, 2)));
   }
+
+  return cardData;
 };
 
-loadDecks();
+init();
