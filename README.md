@@ -18,7 +18,7 @@
 - :brain: Language Learners
 - :man: People who just want to memorize something
 
-**Echo** utilizes a tweaked version of the [SM2 spaced-repetition algorithm](https://www.supermemo.com/en/archives1990-2015/english/ol/sm2). In Echo, not only are you able to efficiently memorize sets of information over time, but you can also quiz yourself and "cram" the information. It should be noted that out of these three, it is proven that spaced-repetition is the most effective.
+**Echo** utilizes a [tweaked version](http://www.blueraja.com/blog/477/a-better-spaced-repetition-learning-algorithm-sm2) of the [SM2 spaced-repetition algorithm](https://www.supermemo.com/en/archives1990-2015/english/ol/sm2). In Echo, not only are you able to efficiently memorize sets of information over time, but you can also quiz yourself and "cram" the information. It should be noted that out of these three, it is proven that spaced-repetition is the most effective.
 
 ### Libraries
 
