@@ -1,5 +1,6 @@
 const fs = require("fs");
 
+// default data
 let deck = "";
 let rawdata = fs.readFileSync("./data/math.json");
 let cards = JSON.parse(rawdata)["cards"];
@@ -7,6 +8,7 @@ var cardIndex = 0;
 
 /* deck functions */
 
+// loads decks
 var loadDecks = function() {
   let echoData = require("./db/echo.json");
 
@@ -58,6 +60,7 @@ var loadDecks = function() {
   });
 };
 
+// when the deck is completed
 var deckComplete = function() {
   alert("Deck completed!");
   $(".card-initial").hide();
@@ -69,6 +72,7 @@ var deckComplete = function() {
   $(".decks-header").show();
 };
 
+// saves usage in heatmap data
 var saveHeatmap = function() {
   let echoData = require("./db/echo.json");
   
@@ -85,6 +89,7 @@ var saveHeatmap = function() {
   fs.writeFileSync("./db/echo.json", JSON.stringify(echoData));
 };
 
+// goes to next card
 var nextCard = function() {
   if (cardIndex + 1 >= cards.length) {
     deckComplete();
@@ -106,6 +111,7 @@ var nextCard = function() {
   }
 };
 
+// preparations for flip cards
 var prepareFlip = function() {
     $(".card-answer-btns").html(
       '<a href="#" class="answer-btn" id="easy">Easy</a><a href="#" class="answer-btn" id="good">Good</a><a href="#" class="answer-btn" id="hard">Hard</a>'
@@ -130,6 +136,7 @@ var prepareFlip = function() {
   });
 };
 
+// preparations for cloze deletion cards
 var prepareCloze = function() {
   var regexp = /{{c([1-9]+)::(.*?)}}/g;
   var answered = 0;
@@ -190,6 +197,7 @@ var prepareCloze = function() {
   });
 };
 
+// perparations for multiple choice cards
 var prepareChoice = function() {
   let builder = "";
 
@@ -216,6 +224,7 @@ var prepareChoice = function() {
   });
 };
 
+// preparations for true/false cards
 var prepareBool = function () {
   $(".card-answer-btns").html(
     '<a href="#" class="answer-btn-bool">True</a><a href="#" class="answer-btn-bool">False</a>'
@@ -237,6 +246,7 @@ var prepareBool = function () {
   });
 };
 
+// perparations for the input cards
 var prepareEnter = function() {
   $(".card-answer-btns").html(
     '<input type="text" id="card-answer" name="card-answer">'
@@ -271,6 +281,7 @@ var prepareEnter = function() {
     });
 };
 
+// deck selection
 var selectDeck = function(deck) {
     rawdata = fs.readFileSync("./data/" + deck + ".json");
     cards = JSON.parse(rawdata)["cards"];
@@ -283,6 +294,7 @@ var selectDeck = function(deck) {
     showCard();
 };
 
+// displaying the card
 var showCard = function() {
   if (cards.length == 0) {
     alert("This deck is empty.");
@@ -336,10 +348,12 @@ var showCard = function() {
   }
 };
 
+// check button functionality for flip cards
 $("#check").on("click", function() {
     $(".card-revealed").show();
 });
 
+// back button functionality 
 $(".go-back").on("click", function() {
     $(".card-initial").hide();
     $(".card-revealed").hide();
@@ -351,12 +365,14 @@ $(".go-back").on("click", function() {
     cardIndex = 0;
 });
 
+// answer button functionality
 $(".answer-btn").on("click", function () {
   nextCard();
 });
 
 /* algo functions */
 
+// calculates days between for SM2 function
 var daysBetween = function(first, second) {
   var getDate = function (d) {
     var splits = str.split("/");
@@ -366,6 +382,7 @@ var daysBetween = function(first, second) {
   return Math.round((getDate(second) - getDate(first))/(1000*60*60*24));
 };
 
+// formats date for SM2 function
 var formatDate = function(date) {
     var d = new Date(date),
         month = "" + (d.getMonth() + 1),
@@ -378,6 +395,8 @@ var formatDate = function(date) {
     return [month, day, year].join("-");
 };
 
+// the SM2 spaced repetition algorithm
+// todo: actually change the values
 var repetitionAlgorithm = function(cardData) {
   // how difficult the card is [0.0, 1.0
   // default -> 0.3 for now
