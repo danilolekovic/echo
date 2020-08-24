@@ -79,8 +79,9 @@ a:active {
 }
 
 #heatmap {
-    position: fixed;
-    bottom: 10vh;
+    position: absolute;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
     left: 50%;
     margin-left: -258px;
 }
@@ -171,11 +172,11 @@ i {
 }
 
 .decks {
-    margin-left: 6vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
-    grid-gap: 1.5rem;
+    grid-gap: 1rem;
+    margin: 6vh;
 }
   
 .deck-card {
