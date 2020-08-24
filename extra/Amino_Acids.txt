@@ -1,0 +1,107 @@
+" What is the name of this compound? <img src=""paste-51917564674052.jpg"" /> <br> "	alanine
+" What is the name of this compound? <img src=""paste-83691732729860.jpg"" /> <br> "	arginine
+" What is the name of this compound? <img src=""paste-89627377532932.jpg"" /> <br> "	asparagine
+" What is the name of this compound? <img src=""paste-85774791868420.jpg"" /> <br> "	aspartate
+" What is the name of this compound? <img src=""paste-74633646702596.jpg"" /> <br> "	cysteine
+" What is the name of this compound? <img src=""paste-87368224735236.jpg"" /> <br> "	glutamate
+" What is the name of this compound? <img src=""paste-92474940850180.jpg"" /> <br> "	glutamine
+" What is the name of this compound? <img src=""paste-50599009714180.jpg"" /> <br> "	glycine
+" What is the name of this compound? <img src=""paste-80908593922052.jpg"" /> <br> "	histidine
+" What is the name of this compound? <img src=""paste-55443732824068.jpg"" /> <br> "	isoleucine
+" What is the name of this compound? <img src=""paste-53450867998724.jpg"" /> <br> "	leucine
+" What is the name of this compound? <img src=""paste-82450487181316.jpg"" /> <br> "	lysine
+" What is the name of this compound? <img src=""paste-70059506532356.jpg"" /> <br> "	methionine
+" What is the name of this compound? <img src=""paste-58677843197956.jpg"" /> <br> "	phenylalanine
+" What is the name of this compound? <img src=""paste-56646323666948.jpg"" /> <br> "	proline
+" What is the name of this compound? <img src=""paste-76995878715396.jpg"" /> <br> "	serine
+" What is the name of this compound? <img src=""paste-79280801316868.jpg"" /> <br> "	threonine
+" What is the name of this compound? <img src=""paste-68118181314564.jpg"" /> <br> "	tryptophan
+" What is the name of this compound? <img src=""paste-66649302499332.jpg"" /> <br> "	tyrosine
+" What is the name of this compound? <img src=""paste-49155900702724.jpg"" /> <br> "	valine
+What is the structure of alanine	"<img src=""paste-51917564674052.jpg"" />"
+What is the structure of arginine	"<img src=""paste-83691732729860.jpg"" />"
+What is the structure of asparagine	"<img src=""paste-89627377532932.jpg"" />"
+What is the structure of aspartate	"<img src=""paste-85774791868420.jpg"" />"
+What is the structure of cysteine	"<img src=""paste-74633646702596.jpg"" />"
+What is the structure of glutamate	"<img src=""paste-87368224735236.jpg"" />"
+What is the structure of glutamine	"<img src=""paste-92474940850180.jpg"" />"
+What is the structure of glycine	"<img src=""paste-50599009714180.jpg"" />"
+What is the structure of histidine	"<img src=""paste-80908593922052.jpg"" />"
+What is the structure of isoleucine	"<img src=""paste-55443732824068.jpg"" />"
+What is the structure of leucine	"<img src=""paste-53450867998724.jpg"" />"
+What is the structure of lysine	"<img src=""paste-82450487181316.jpg"" />"
+What is the structure of methionine	"<img src=""paste-70059506532356.jpg"" />"
+What is the structure of phenylalanine	"<img src=""paste-58677843197956.jpg"" />"
+What is the structure of proline	"<img src=""paste-56646323666948.jpg"" />"
+What is the structure of serine	"<img src=""paste-76995878715396.jpg"" />"
+What is the structure of threonine	"<img src=""paste-79280801316868.jpg"" />"
+What is the structure of tryptophan	"<img src=""paste-68118181314564.jpg"" />"
+What is the structure of tyrosine	"<img src=""paste-66649302499332.jpg"" />"
+What is the structure of valine	"<img src=""paste-49155900702724.jpg"" />"
+ala <br> is the three letter code for 	alanine
+a <br> is the one letter code for 	alanine 
+arg <br> is the three letter code for 	arginine
+r <br> is the one letter code for 	arginine 
+asn <br> is the three letter code for 	asparagine
+n <br> is the one letter code for 	asparagine 
+asp <br> is the three letter code for 	aspartate
+d <br> is the one letter code for 	aspartate 
+cys <br> is the three letter code for 	cysteine
+c <br> is the one letter code for 	cysteine 
+glu <br> is the three letter code for 	glutamate
+e <br> is the one letter code for 	glutamate 
+gln <br> is the three letter code for 	glutamine
+q <br> is the one letter code for 	glutamine 
+gly <br> is the three letter code for 	glycine
+g <br> is the one letter code for 	glycine 
+his <br> is the three letter code for 	histidine
+h <br> is the one letter code for 	histidine 
+ile <br> is the three letter code for 	isoleucine
+i <br> is the one letter code for 	isoleucine 
+leu <br> is the three letter code for 	leucine
+l <br> is the one letter code for 	leucine 
+lys <br> is the three letter code for 	lysine
+k <br> is the one letter code for 	lysine 
+met <br> is the three letter code for 	methionine
+m <br> is the one letter code for 	methionine 
+phe <br> is the three letter code for 	phenylalanine
+f <br> is the one letter code for 	phenylalanine 
+pro <br> is the three letter code for 	proline
+p <br> is the one letter code for 	proline 
+ser <br> is the three letter code for 	serine
+s <br> is the one letter code for 	serine 
+thr <br> is the three letter code for 	threonine
+t <br> is the one letter code for 	threonine 
+trp <br> is the three letter code for 	tryptophan
+w <br> is the one letter code for 	tryptophan 
+tyr <br> is the three letter code for 	tyrosine
+y <br> is the one letter code for 	tyrosine 
+val <br> is the three letter code for 	valine
+v <br> is the one letter code for 	valine 
+The charge/polarity of alanine is: <br> 	chemical type: nonpolar  <br>  
+The charge/polarity of arginine is: <br> 	chemical type: positive  <br>  
+The charge/polarity of asparagine is: <br> 	chemical type: uncharged polar  <br>  
+The charge/polarity of aspartate is: <br> 	chemical type: negative  <br>  
+The charge/polarity of cysteine is: <br> 	chemical type: nonpolar  <br>  
+The charge/polarity of glutamate is: <br> 	chemical type: negative  <br>  
+The charge/polarity of glutamine is: <br> 	chemical type: uncharged polar  <br>  
+The charge/polarity of glycine is: <br> 	chemical type: nonpolar  <br>  
+The charge/polarity of histidine is: <br> 	chemical type: positive  <br>  
+The charge/polarity of isoleucine is: <br> 	chemical type: nonpolar  <br>  
+The charge/polarity of leucine is: <br> 	chemical type: nonpolar  <br>  
+The charge/polarity of lysine is: <br> 	chemical type: positive  <br>  
+The charge/polarity of methionine is: <br> 	chemical type: nonpolar  <br>  
+The charge/polarity of phenylalanine is: <br> 	chemical type: nonpolar  <br>  
+The charge/polarity of proline is: <br> 	chemical type: nonpolar  <br>  
+The charge/polarity of serine is: <br> 	chemical type: uncharged polar  <br>  
+The charge/polarity of threonine is: <br> 	chemical type: uncharged polar  <br>  
+The charge/polarity of tryptophan is: <br> 	chemical type: nonpolar  <br>  
+The charge/polarity of tyrosine is: <br> 	chemical type: uncharged polar  <br>  
+The charge/polarity of valine is: <br> 	chemical type: nonpolar  <br>  
+"What is the pKa of the R group for  arginine?<br> <img src=""paste-83691732729860.jpg"" /> <br>    "	pKa: 12.5 
+"What is the pKa of the R group for  aspartate?<br> <img src=""paste-85774791868420.jpg"" /> <br>    "	pKa: 3.9 
+"What is the pKa of the R group for  cysteine?<br> <img src=""paste-74633646702596.jpg"" /> <br>    "	pKa: 8.4 
+"What is the pKa of the R group for  glutamate?<br> <img src=""paste-87368224735236.jpg"" /> <br>    "	pKa: 4.1 
+"What is the pKa of the R group for  histidine?<br> <img src=""paste-80908593922052.jpg"" /> <br>    "	pKa: 6.0 
+"What is the pKa of the R group for  lysine?<br> <img src=""paste-82450487181316.jpg"" /> <br>    "	pKa: 10.5 
+"What is the pKa of the R group for  tyrosine?<br> <img src=""paste-66649302499332.jpg"" /> <br>    "	pKa: 10.5 

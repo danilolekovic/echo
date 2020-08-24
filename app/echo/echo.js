@@ -455,16 +455,11 @@ var repetitionAlgorithm = function(cardData) {
 
 // importing anki decks
 var importAnki = function(name, emoji) {
-  // create generic
-  var cardJSON = {
-    "name": name,
-    "emoji": emoji,
-    "cards": [],
-  };
+  let cardArray = [];
 
   // anki txt export is formatted as new question breaker = \n
   var lineReader = readline.createInterface({
-    input: fs.createReadStream("../extra/anki_export.txt"),
+    input: fs.createReadStream("../extra/Amino_Acids.txt"),
   });
 
   lineReader.on("line", function (line) {
@@ -473,7 +468,7 @@ var importAnki = function(name, emoji) {
     let a = line.split('\t')[1];
 
     // defaults
-    cardJSON.cards.push({
+    cardArray.push({
       question: q,
       answer: a,
       type: "flip",
@@ -484,10 +479,17 @@ var importAnki = function(name, emoji) {
       dateLastReviewed: "",
       tags: []
     });
-  });
+  }).on('close', function() {
+    // create generic
+    var cardJSON = {
+      name: name,
+      emoji: emoji,
+      cards: cardArray
+    };
 
-  fs.writeFileSync("./data/" + name + ".json", JSON.stringify(cardJSON));
+    fs.writeFileSync("./data/" + name + ".json", JSON.stringify(cardJSON));
+  });
 };
 
 init();
-importAnki("Macroecon", "!");
+importAnki("Amino Acids", "");
