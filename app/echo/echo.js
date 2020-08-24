@@ -453,18 +453,27 @@ var repetitionAlgorithm = function(cardData) {
   return cardData;
 };
 
-var importAnki = function() {
-  var cardsArray = [];
+// importing anki decks
+var importAnki = function(name, emoji) {
+  // create generic
+  var cardJSON = {
+    "name": name,
+    "emoji": emoji,
+    "cards": [],
+  };
 
+  // anki txt export is formatted as new question breaker = \n
   var lineReader = readline.createInterface({
     input: fs.createReadStream("../extra/anki_export.txt"),
   });
 
   lineReader.on("line", function (line) {
+    // seperator between question and answer is \t
     let q = line.split('\t')[0];
     let a = line.split('\t')[1];
 
-    cardsArray.push({
+    // defaults
+    cardJSON.cards.push({
       question: q,
       answer: a,
       type: "flip",
@@ -477,14 +486,8 @@ var importAnki = function() {
     });
   });
 
-  var cardJSON = {
-    "name": "Macroecon",
-    "emoji": "📘",
-    "cards": cardsArray,
-  };
-
-  console.log(cardJSON);
+  fs.writeFileSync("./data/" + name + ".json", JSON.stringify(cardJSON));
 };
 
 init();
-importAnki();
+importAnki("Macroecon", "!");
