@@ -1,4 +1,5 @@
 const fs = require("fs");
+const readline = require("readline");
 
 // default data
 let deck = "";
@@ -452,4 +453,38 @@ var repetitionAlgorithm = function(cardData) {
   return cardData;
 };
 
+var importAnki = function() {
+  var cardsArray = [];
+
+  var lineReader = readline.createInterface({
+    input: fs.createReadStream("../extra/anki_export.txt"),
+  });
+
+  lineReader.on("line", function (line) {
+    let q = line.split('\t')[0];
+    let a = line.split('\t')[1];
+
+    cardsArray.push({
+      question: q,
+      answer: a,
+      type: "flip",
+      repeat: 0,
+      difficulty: 0.3,
+      performanceRating: -1,
+      daysBetweenReviews: 1,
+      dateLastReviewed: "",
+      tags: []
+    });
+  });
+
+  var cardJSON = {
+    "name": "Macroecon",
+    "emoji": "📘",
+    "cards": cardsArray,
+  };
+
+  console.log(cardJSON);
+};
+
 init();
+importAnki();

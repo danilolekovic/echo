@@ -1,0 +1,38 @@
+What is short-run?	1 variable changes
+What is long-run?	All variables adjust
+What are runs about?	Runs are not about time!<div><br></div><div>They are about how many things adjust</div>
+What is intermediate-run?	Some variables change, some don't
+What happens to factor prices, technology, and factor supplies in the short-run?	<ul><li>Factor prices are exogenous</li><li>Technology and factor supplies are constant</li></ul>
+What happens to factor prices, technology, and factor supplies in the long-run?	<ul><li>Factor prices fully adjust</li><li>Technology and factor supplies are changing</li></ul>
+What happens to factor prices, technology, and factor supplies in the intermediate-run?	<ul><li>Factor prices fully adjust</li><li>Technology and factor supplies are constant</li></ul>
+What does potential output mean?	Given technology, all factors are used optimally
+Why is the AS curve upward sloping?	The quantity supplied increases when the price rises.<div><br></div><div>Cost per unit of factor is constant, but, cost per unit of output isn't constant</div>
+What is a recessionary gap? What does it look like?	"<ul> <li>Equilibrium is to the left of potential output</li> <li>Factors are less than optimally employed</li> <li>Essentially, bunch of people walking around looking for jobs</li></ul><div><img src=""paste-d4f104936376f4d1e7a8314725beede4cf05b1a9.png""><br></div>"
+What happens to the bargaining power of firms and unions in a recessionary gap?	<ul> <li>Bargaining power of firms increases</li> <li>Bargaining power of unions decreases</li></ul>
+What happens to factor prices in a recessionary gap?	Factor prices become lower
+What is an inflationary gap? What does it look like?	"<ul> <li>Equilibrium is to the right of potential output</li> <li>Factors are employed more optimally</li></ul><div><img src=""paste-d6952b7feae93d87e63820c9430118dc5a8ee161.png""><br></div>"
+What happens to factor prices in an inflationary gap?	Factors prices increases
+What happens in short-run?	<ul> <li>Short-run leads to change in factor prices</li> <li>Factor prices change AS curve</li> <li>Factor price change restores equilibrium back to potential output</li></ul>
+What is easier? Factor pricing adjusting upward or downward? What is it called? Why?	<ul> <li>Factor prices adjusting upward is easier <ul> <li><i>Think:</i> how long would it take workers to agree to less wage?</li> </ul> </li> <li>Downward pressure can take a long time, while upward pressure can be instant</li></ul>
+What is a shock?	Any event that causes the output to change significantly (an event that shifts either AD or AS)
+What are positive shocks?	Shocks that move the output up
+What are negative shocks?	Shocks that move the output down
+What are some events that shift AD?	<ul> <li>Change in government spending</li> <li>Change in investment (business confidence, invention)</li> <li>Exports (foreign income)</li> <li>Wealth (stock market, homes)</li> <li>Taxes</li></ul>
+What are things that shift the AD that the government controls?	<ul> <li>Government spending</li> <li>Taxes</li></ul>
+What are some events that shift AS?	<ul> <li>Price of factors</li> <li>Change in technology</li> <li>Natural events</li></ul>
+What is the Phillip's curve?	A relationship between GDP and the rate of change of money wages
+What is decision lag?	The period of time between perceiving some problem and reaching a decision on what to do about it
+What is execution lag?	The time that it takes to put policies in place after a decision has been made
+What is recognition lag?	The time it takes to look at the economy and recognize that there is a recession
+When is a recession recognized as an official recession?	When GDP goes down consecutively for 2 quarters
+Is a temporary decrease in taxes effective as means of fiscal policy?	No
+What does the presence of taxes and government do to the economy?	Makes it more stable
+What influences the government's budget? What kind of events are these changes?	<ul> <li>Government spending and taxes</li> <li>They are fiscal events</li></ul>
+When does Ricardian equivalence hold?	It holds if people don't react to change in taxes
+What does fiscal stabilization policy do?	<ul> <li>Reduces the business cycles</li> <li>G and T are used</li></ul>
+What is the difference between the economy adjusting itself and the government implementing fiscal policy to adjust the economy?	<ul> <li>Government adjusting can be faster (shorter recession)</li> <li>No inflation changes</li></ul>
+What is the paradox of thrift?	<ul> <li>Self-fulfilling prophecy</li> <li>Short-run phenomenon</li></ul>
+What are automatic stabilizers?	Elements of the tax-and-transfer system that reduce the responsiveness of real GDP to changes in autonomous expenditure
+What is gross-tuning?	The use of fiscal policy to stabilize the economy such that large deviations from potential output do not persist for extended periods of time
+What is fine-tuning? When is it not a good response?	<ul> <li>Fine-tuning is when fiscal policy tries to counteract every recession</li> <li>The attempt to maintain output at its potential level by means of frequent changes in fiscal or monetary policy</li> <li>Not a good response for the short-run</li></ul>
+Why is gross-tuning more appropriate than fine-tuning?	<ul> <li>Gross-tuning is relatively cost-effective to fine-tuning</li> <li>Fine-tuning is more likely to deteriorate an economic stability</li></ul>
