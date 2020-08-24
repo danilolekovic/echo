@@ -454,12 +454,12 @@ var repetitionAlgorithm = function(cardData) {
 };
 
 // importing anki decks
-var importAnki = function(name, emoji) {
+var importAnki = function(name, emoji, fileLocation) {
   let cardArray = [];
 
   // anki txt export is formatted as new question breaker = \n
   var lineReader = readline.createInterface({
-    input: fs.createReadStream("../extra/Amino_Acids.txt"),
+    input: fs.createReadStream(fileLocation),
   });
 
   lineReader.on("line", function (line) {
@@ -492,4 +492,3 @@ var importAnki = function(name, emoji) {
 };
 
 init();
-importAnki("Amino Acids", "");
